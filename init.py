@@ -90,7 +90,7 @@ def makeFile():
 
 
 # globals
- gToday = datetime.date.today()
+gToday = datetime.date.today()
 # gToday = datetime.datetime(2018, 12, 1, 12, 30, 59, 0)
 
 gIndex = 0
