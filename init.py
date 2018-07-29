@@ -56,14 +56,23 @@ def is23Hour():
     else : 
         return False
 
-
+    
 def getLine() :
     line = '' 
     lineIndex = getIndex()
-    lineDate = str(gYear) +'.' + str(getMonth()) + '.' + str(getDay())
+    lineMonthInt = getMonth()
+    lineMonth = str(lineMonthInt)
+    
+    if len(lineMonth) < 2:
+        lineMonth = '0'+lineMonth 
+    lineDay = str(getDay())
+    if len(lineDay) < 2:
+        lineDay = '0'+lineDay 
+    
+    lineDate = str(gYear) +'.' + lineMonth + '.' + str(lineDay)
 
     # 프로그램 종료 ( 다음 달 1일의 10시 시점)
-    if (gHour == 10) and (gToday.month != getMonth()):
+    if (gHour == 10) and (gToday.month != lineMonthInt):
         return False 
     lineTime = str(getHour()) + ':00:00'
     
