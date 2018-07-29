@@ -85,7 +85,7 @@ def init(f) :
             f.write(result+'\n')
 
 def makeFile():
-    f = open("logForHuAndC.txt", "w")
+    f = open("data1.txt", "w")
     return f 
 
 
